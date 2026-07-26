@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock Paper Scissors</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+h1{
+    margin-bottom:35px;
+    font-size:38px;
+}
+
+.score-board{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:45px;
+}
+
+.score{
+    width:160px;
+    background:rgba(255,255,255,.1);
+    padding:20px;
+    border-radius:15px;
+}
+
+.score h2{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.score span{
+    font-size:45px;
+    font-weight:bold;
+    color:#4ade80;
+}
+
+.vs{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.choices{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:150px;
+    height:170px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#222;
+    cursor:pointer;
+    transition:.35s;
+    font-size:70px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.card p{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+    background:#2563eb;
+    color:white;
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+.result{
+    margin-top:40px;
+    background:#22c55e;
+    padding:18px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+@media(max-width:650px){
+
+    h1{
+        font-size:30px;
+    }
+
+    .score-board{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .card{
+        width:120px;
+        height:140px;
+        font-size:55px;
+    }
+
+    .card p{
+        font-size:18px;
+    }
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>✊ Rock Paper Scissors ✋</h1>
+
+    <div class="score-board">
+        <div class="score">
+            <h2>Player</h2>
+            <span>0</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="score">
+            <h2>Computer</h2>
+            <span>0</span>
+        </div>
+    </div>
+
+    <div class="choices">
+
+        <button class="card">
+            ✊
+            <p>Rock</p>
+        </button>
+
+        <button class="card">
+            ✋
+            <p>Paper</p>
+        </button>
+
+        <button class="card">
+            ✌️
+            <p>Scissors</p>
+        </button>
+
+    </div>
+
+    <div class="result">
+        Choose Your Move
+    </div>
+
+</div>
+
+</body>
+<script src="maiin.js"></script>
+</html>
+
+

@@ -77,10 +77,12 @@ function countDown() {
   timeDisplay.innerHTML = time;
 }
 
+const gameOverSound = Audio("game-over.mp3");
+
 function gameOver() {
   if (time === 0) {
     message.innerHTML = "Game Over!!";
     document.getElementById("input").disabled = true;
-    // gameOver.disabled = true;
+   gameOverSound.play();
   }
 };
